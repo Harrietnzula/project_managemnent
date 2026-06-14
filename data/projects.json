@@ -1,0 +1,32 @@
+{
+  "My App": {
+    "title": "My App",
+    "owner": "Alice",
+    "description": "",
+    "status": "active",
+    "contributors": [],
+    "tasks": [
+      {
+        "title": "Write API docs",
+        "description": "",
+        "status": "todo",
+        "priority": "medium",
+        "assignee": "",
+        "due_date": "",
+        "created_at": "2026-06-14T21:22:16.648560",
+        "completed_at": ""
+      },
+      {
+        "title": "Setup CI",
+        "description": "",
+        "status": "todo",
+        "priority": "medium",
+        "assignee": "",
+        "due_date": "",
+        "created_at": "2026-06-14T21:22:16.650622",
+        "completed_at": ""
+      }
+    ],
+    "created_at": "2026-06-14T21:22:16.646254"
+  }
+}

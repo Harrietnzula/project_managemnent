@@ -1,0 +1,81 @@
+# Project Management CLI
+
+A Python-based Command-Line Interface (CLI) for managing a multi-user project tracker.
+Built with `argparse`, `rich`, and JSON-based persistence.
+
+---
+
+## Project Structure
+---
+
+## Installation
+
+```bash
+git clone https://github.com/<your-username>/project-management-cli.git
+cd project-management-cli
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+### Users
+```bash
+python main.py add-user --name "Alex" --email alex@dev.io --role developer
+python main.py list-users
+python main.py delete-user --name "Alex"
+```
+
+### Projects
+```bash
+python main.py add-project --user "Alex" --title "CLI Tool" --desc "A neat tool"
+python main.py list-projects
+python main.py list-projects --user "Alex"
+python main.py show-project --title "CLI Tool"
+python main.py update-project --title "CLI Tool" --status completed
+python main.py add-contributor --project "CLI Tool" --user "Jordan"
+python main.py delete-project --title "CLI Tool"
+```
+
+### Tasks
+```bash
+python main.py add-task --project "CLI Tool" --title "Build CLI" --priority high --assignee "Alex" --due 2025-12-31
+python main.py list-tasks --project "CLI Tool"
+python main.py complete-task --project "CLI Tool" --task "Build CLI"
+python main.py update-task --project "CLI Tool" --task "Build CLI" --status in-progress
+python main.py delete-task --project "CLI Tool" --task "Build CLI"
+```
+
+### Search
+```bash
+python main.py search --query "CLI"
+```
+
+---
+
+## Running Tests
+
+```bash
+pytest tests/ -v
+```
+
+---
+
+## Data Relationships
+
+- One user owns many projects
+- One project has many tasks
+- A project can have many contributors (many-to-many)
+
+---
+
+## Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| `rich` | Colour tables and panels |
+| `python-dateutil` | Date utilities |
+| `pytest` | Test runner |
